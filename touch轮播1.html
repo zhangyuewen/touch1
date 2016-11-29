@@ -43,7 +43,7 @@
                 $(".box").css({
                     transition:"none"
                 })
-                marginL=parseInt($(".box").css("marginLeft"))?parseInt($(".box").css("marginLeft")):ch;
+                marginL=parseInt($(".box").css("marginLeft"))?parseInt($(".box").css("marginLeft")):0;
             })
             touch.on("body","drag",".box", function (e) {
                 $(".box").css({
@@ -57,10 +57,10 @@
                         if(num==$(".box a").length){
                             num=$(".box a").length-1;
                         }
-                        $(".imgbox").css({
-                            marginLeft:num*ch,
-                            transition:"margin-left 1s ease"
-                        })
+//                        $(".imgbox").css({
+//                            marginLeft:num*ch,
+//                            transition:"margin-left 1s ease"
+//                        })
                     }else if(e.direction=="right"){
                         num--;
                         if(num==-1){
